@@ -3,9 +3,7 @@ CC = g++
 
 CFLAGS = -std=c++98 -g -Wall -Werror -Wextra
 
-
 SRC = ./main.cpp ClapTrap.cpp
-
 
 OBJS =  $(SRC:%.cpp=%.o)
 

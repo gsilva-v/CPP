@@ -1,8 +1,8 @@
 #if !defined(FRAGTRAP_HPP)
 # define FRAGTRAP_HPP
 
-#include <iostream>
-#include "ClapTrap.hpp"
+# include <iostream>
+# include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap
 {

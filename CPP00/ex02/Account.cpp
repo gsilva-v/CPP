@@ -11,7 +11,6 @@ int Account::_totalNbDeposits = 0;
 int Account::_totalNbWithdrawals = 0;
 
 Account :: Account(int initial_deposit){
-// [19920104_091532] index:0;amount:42;created
 	this->_accountIndex = this->_nbAccounts;
 	this->_nbAccounts += 1;
 	this->_amount = initial_deposit;
@@ -24,7 +23,6 @@ Account :: Account(int initial_deposit){
 }
 
 Account :: ~Account(){
-// [19920104_091532] index:3;amount:430;closed
 	this->_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex << ";";
 	std::cout << "amount:" << this->_amount << ";";
@@ -75,7 +73,6 @@ int	Account::getNbWithdrawals(void){
 }
 
 void	Account::displayAccountsInfos(void){
-// [19920104_091532] accounts:8;total:20049;deposits:0;withdrawals:0
 	Account::_displayTimestamp();
 	std::cout << "accounts:" << Account::_nbAccounts << ";";
 	std::cout << "total:" << Account::_totalAmount << ";";
@@ -85,7 +82,6 @@ void	Account::displayAccountsInfos(void){
 
 // Funções nao static
 void	Account::makeDeposit(int deposit){
-	// [19920104_091532] index:0;p_amount:42;deposit:5;amount:47;nb_deposits:1
 	Account::_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex<< ";";
 	std::cout << "p_amount:" << this->_amount << ";";
@@ -101,7 +97,6 @@ void	Account::makeDeposit(int deposit){
 }
 
 bool	Account::makeWithdrawal(int withdrawal){
-	// [19920104_091532] index:1;p_amount:819;withdrawal:34;amount:785;nb_withdrawals:1
 	Account::_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex<< ";";
 	std::cout << "p_amount:" << this->_amount << ";";
@@ -114,7 +109,6 @@ bool	Account::makeWithdrawal(int withdrawal){
 		std::cout << "nb_withdrawal:" << this->_nbWithdrawals<< std::endl;
 		return (true);
 	}
-	//[19920104_091532] index:0;p_amount:47;withdrawal:refused
 	std::cout << "withdrawal:refused" << std::endl;
 	return (false);
 }
@@ -124,7 +118,6 @@ int	Account::checkAmount(void)const{
 }
 
 void	Account::displayStatus(void)const{
-// [19920104_091532] index:1;amount:54;deposits:0;withdrawals:0
 	Account::_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex<< ";";
 	std::cout << "amount:" << this->_amount << ";";

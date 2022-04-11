@@ -1,7 +1,6 @@
 #include "Fixed.hpp"
 #include <iostream>
 
-
 Fixed::Fixed(/* args */)
 {
 	this->fixed_number = 0;

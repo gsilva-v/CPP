@@ -5,7 +5,6 @@ CFLAGS = -std=c++98 -g
 
 SRC = ./main.cpp ./Fixed.cpp ./Point.hpp
 
-
 OBJS =  $(SRC:%.cpp=%.o)
 
 all:	${NAME}

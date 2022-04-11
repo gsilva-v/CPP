@@ -5,7 +5,6 @@ CFLAGS = -std=c++98 -g -Wall -Werror -Wextra
 
 SRC = ./HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
 
-
 OBJS =  $(SRC:%.cpp=%.o)
 
 all:	${NAME}

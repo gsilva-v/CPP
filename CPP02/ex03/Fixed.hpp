@@ -1,6 +1,6 @@
 #ifndef FIXED_HPP
-#define FIXED_HPP
-#include <iostream>
+# define FIXED_HPP
+# include <iostream>
 
 class Fixed
 {

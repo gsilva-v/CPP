@@ -7,7 +7,6 @@ SRC = ./PhoneBook.cpp \
 		./main.cpp \
 		./Contact.cpp
 
-
 OBJS =  $(SRC:%.cpp=%.o)
 
 all:	${NAME}

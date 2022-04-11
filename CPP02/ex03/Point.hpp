@@ -1,7 +1,7 @@
 #ifndef POINT_HPP
-#define POINT_HPP
+# define POINT_HPP
 
-#include "Fixed.hpp"
+# include "Fixed.hpp"
 
 class Point
 {
@@ -15,6 +15,5 @@ public:
 	Point	&operator = (const Point &point);
 
 };
-
 
 #endif

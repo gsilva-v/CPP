@@ -41,4 +41,3 @@ void DiamondTrap::attack(const std::string& target){
 void DiamondTrap::whoAmI()const {
 	std::cout << "i am "  << std::endl;
 }
-
