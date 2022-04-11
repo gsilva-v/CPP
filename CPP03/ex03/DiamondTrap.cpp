@@ -12,7 +12,7 @@ DiamondTrap::DiamondTrap(std::string const &name)
 	this->_energy = ScavTrap::_energy;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &ref) : ScavTrap(ref._name), FragTrap(ref._name)
+DiamondTrap::DiamondTrap(const DiamondTrap &ref): ClapTrap(ref._name + "_clap_name"), ScavTrap(ref._name), FragTrap(ref._name)
 {
 	*this = ref;
 	std::cout << "DiamondTrap contructor by copy" << std::endl;
@@ -21,13 +21,16 @@ DiamondTrap::DiamondTrap(const DiamondTrap &ref) : ScavTrap(ref._name), FragTrap
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "Destructor of DiamondTrap " << " called" <<std::endl;
+	std::cout << "Destructor of DiamondTrap " << this->_name << " called" <<std::endl;
 }
 
 DiamondTrap		&DiamondTrap::operator=(DiamondTrap const &ref)
 {
 	if (this != &ref){
-
+		this->_name = ref._name;
+		this->_attack = ref._attack;
+		this->_energy = ref._energy;
+		this->_hit_damage = ref._hit_damage;
 	}
 	std::cout << "DiamonTrap 'operator=' called" << std::endl;
 	return *this;
@@ -39,5 +42,6 @@ void DiamondTrap::attack(const std::string& target){
 
 
 void DiamondTrap::whoAmI()const {
-	std::cout << "i am "  << std::endl;
+	std::cout << "i am " << this->_name << std::endl;
+	;
 }
