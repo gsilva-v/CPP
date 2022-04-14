@@ -12,7 +12,7 @@ public:
 	ScavTrap	&operator=(ScavTrap const &rsh);
 	~ScavTrap();
 	void guardGate()const;
-
+	void attack(const std::string& target);
 };
 
 #endif // SCAVTRAP_HPP

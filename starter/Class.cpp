@@ -1,8 +1,8 @@
 #include "Class.hpp"
 
-Class::Class(std::string const &name)
+Class::Class()
 {
-	std::cout << "Class constructor called for "<< name << std::endl;
+	std::cout << "Class constructor called" << std::endl;
 }
 
 Class::Class(const Class &ref)
@@ -22,10 +22,7 @@ Class		&Class::operator=(Class const &ref)
 	std::cout << "Assignation with operator= called" <<std::endl;
 	if (this != &ref)
 	{
-		this->_name = ref._name;
-		this->_hit_damage = ref._hit_damage;
-		this->_energy = ref._energy;
-		this->_attack = ref._attack;
+		*this = ref;
 	}
 	return *this;
 }

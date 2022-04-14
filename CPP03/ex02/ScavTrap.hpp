@@ -1,8 +1,8 @@
 #if !defined(SCAVTRAP_HPP)
 # define SCAVTRAP_HPP
 
-#include <iostream>
-#include "ClapTrap.hpp"
+# include <iostream>
+# include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap
 {
@@ -12,7 +12,7 @@ public:
 	ScavTrap	&operator=(ScavTrap const &rsh);
 	~ScavTrap();
 	void guardGate()const;
-
+	void attack(const std::string& target);
 };
 
 #endif // SCAVTRAP_HPP

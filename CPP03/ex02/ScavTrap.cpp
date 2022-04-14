@@ -30,3 +30,15 @@ ScavTrap		&ScavTrap::operator=(ScavTrap const &ref)
 void ScavTrap::guardGate()const {
 	std::cout << "ScavTrap " << this->_name << " in Gate keeper mode" << std::endl;
 }
+
+void ScavTrap::attack(const std::string& target){
+	if (this->_energy >= 1){
+		std::cout << "ScavTrap " << this->_name;
+		std::cout << " attacks " << target;
+		std::cout << " causing " << this->_attack << " points of damage" << std::endl;
+	} else {
+		std::cout << "ScavTrap " << this->_name;
+		std::cout << "it's out of energy" << this->_name;
+	}
+
+}

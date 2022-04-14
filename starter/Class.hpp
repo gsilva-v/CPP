@@ -8,7 +8,7 @@ class Class
 protected:
 
 public:
-	Class(std::string const &name = "Default_Frag");
+	Class();
 	Class(const Class &ref);
 	Class	&operator=(Class const &ref);
 	~Class();
