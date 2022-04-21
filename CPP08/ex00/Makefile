@@ -1,9 +1,10 @@
-NAME = fixed
-CC = g++
+NAME = find
+CC = c++
 
-CFLAGS = -std=c++98 -g 
+CFLAGS = -std=c++98 -g -Wall -Werror -Wextra
 
-SRC = ./main.cpp ./Fixed.cpp ./Point.hpp
+SRC = ./main.cpp
+
 
 OBJS =  $(SRC:%.cpp=%.o)
 
@@ -13,7 +14,6 @@ all:	${NAME}
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 ${NAME}:	${OBJS}
-	echo ${OBJS}
 	${CC} ${CFLAGS} -o ${NAME} ${OBJS}
 
 clean:		

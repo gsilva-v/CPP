@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 	}
 	for (int x = 1; argv[x]; x++){
 		for (int y = 0; argv[x][y]; y++){
-			buffer += toupper(argv[x][y]);//concatena com oq ja tem na string
+			buffer += toupper(argv[x][y]);
 		}
 	}
 	cout << buffer << endl;

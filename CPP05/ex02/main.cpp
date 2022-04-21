@@ -31,6 +31,7 @@ int main (void){
 	}
 	
 
+
 	try
 	{
 		RobotomyRequestForm robo("furo");
@@ -42,6 +43,10 @@ int main (void){
 		std::cerr << e.what() << '\n';
 	}
 	
+	PresidentialPardonForm pres("menino");
+	Bureaucrat rapaz("rapaz", 149);
 
+	rapaz.executeForm(pres);
+	
 	return (0);
 }

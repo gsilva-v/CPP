@@ -2,10 +2,10 @@
 
 Harl::Harl()
 {
-	this->commandList["DEBUG"] = &Harl::debug;
-	this->commandList["INFO"] = &Harl::info;
-	this->commandList["WARNING"] = &Harl::warning;
-	this->commandList["ERROR"] = &Harl::error;
+	this->commandList[0] = "DEBUG";
+	this->commandList[1] = "INFO";
+	this->commandList[2] = "WARNING";
+	this->commandList[3] = "ERROR";
 }
 
 Harl::~Harl()
@@ -40,10 +40,19 @@ void Harl::error( void ){
 // Public
 
 void Harl::complain(std::string level){
-	
-	if (this->commandList[level])
-		(this->*commandList[level])();
-	else
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+	void    (Harl::*functions[4])(void) = {
+        &Harl::debug,
+        &Harl::info,
+        &Harl::warning,
+        &Harl::error
+    };
+
+	for (int i = 0 ; i < 4; i++){
+		if (this->commandList[i].compare(level) == 0){
+			(this->*functions[i])();
+			return ;
+		}
+	}
+	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
  
 }

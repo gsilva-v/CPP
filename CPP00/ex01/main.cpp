@@ -9,7 +9,7 @@ void check_input(std::string input, PhoneBook *lista){
 		lista->is_open = 0;
 }
 
-int main()
+int main(void)
 {
 	PhoneBook lista;
 	std :: string input;

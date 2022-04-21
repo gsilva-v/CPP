@@ -1,7 +1,7 @@
 #include "Fixed.hpp"
 #include <iostream>
 
-Fixed::Fixed(/* args */)
+Fixed::Fixed()
 {
 	this->fixed_number = 0;
 	std::cout << "Default constructor called" << std::endl;
@@ -18,7 +18,7 @@ Fixed::Fixed(const Fixed &fixed)
 	*this = fixed;
 }
 
-void	Fixed::operator = (const Fixed &fixed)
+void	Fixed::operator= (const Fixed &fixed)
 {
 	std::cout <<"Copy assignment operator called" << std::endl;
 	this->fixed_number = fixed.getRawBits();

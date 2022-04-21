@@ -83,22 +83,22 @@ int main( void )
 
 		std::cout << "---------------------" << std::endl;
 
-		std::cout << "Max e min" << std::endl;
-		std::cout << "Max sem const" << std::endl;
+		std::cout << "Max / min" << std::endl;
+		std::cout << "Max " << std::endl;
 		a.setRawBits(5.7f);
 		b.setRawBits(5.0f);
 		std::cout << "a = " << a << std::endl;
 		std::cout << "b = " << b << std::endl;	
 		std::cout << Fixed::max(a, b) << std::endl;
 
-		std::cout << "Min sem const" << std::endl;
+		std::cout << "Min" << std::endl;
 		a.setRawBits(18.9f);
 		b.setRawBits(4.6f);
 		std::cout << "a = " << a << std::endl;
 		std::cout << "b = " << b << std::endl;	
 		std::cout << Fixed::min(a, b) << std::endl;}
 	{
-		std::cout << "Max com const" << std::endl;
+		std::cout << "Max const" << std::endl;
 		Fixed const c(15.6f);
 		Fixed const d(8.6f);
 		std::cout << "c = " << c << std::endl;
@@ -106,7 +106,7 @@ int main( void )
 		std::cout << Fixed::max(c, d) << std::endl;
 	}
 	{
-		std::cout << "Min com const" << std::endl;
+		std::cout << "Min const" << std::endl;
 		Fixed const c(15.6f);
 		Fixed const d(8.6f);
 		std::cout << "c = " << c << std::endl;

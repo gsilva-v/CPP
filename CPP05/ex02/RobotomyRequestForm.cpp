@@ -1,13 +1,17 @@
 #include "RobotomyRequestForm.hpp"
 #include <cstdlib>
-RobotomyRequestForm::RobotomyRequestForm(std::string name): Form(name, 45 , 72)
+RobotomyRequestForm::RobotomyRequestForm(std::string _target)
+: Form("RobotomyRequestForm", 45 , 72) , target(_target)
 {
+	srand(time(NULL));
 	std::cout << "RobotomyRequestForm constructor called" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &ref): Form(ref.getName(), 45 , 72)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &ref)
+: Form("RobotomyRequestForm", 45 , 72) , target(ref.getTarget())
 {
 	*this = ref;
+	srand(time(NULL));
 	std::cout << "RobotomyRequestForm contructor by copy" << std::endl;
 }
 
@@ -32,8 +36,12 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
 		throw RobotomyRequestForm::Form::GradeTooLowException();
 
 	if (rand() % 2)
-		std::cout << this->getName() << " has been robotomized successfully" << std::endl;
+		std::cout << this->getTarget() << " has been robotomized successfully" << std::endl;
 	else
 		std::cout << "Robotomy failed" << std::endl;
 
+}
+
+std::string RobotomyRequestForm::getTarget()const {
+	return (this->target);
 }

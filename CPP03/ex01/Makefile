@@ -1,5 +1,5 @@
 NAME = ScavTrap
-CC = g++
+CC = c++
 
 CFLAGS = -std=c++98 -g -Wall -Werror -Wextra
 
@@ -13,7 +13,7 @@ all:	${NAME}
 	$(CC) $(CFLAGS) -c -o $@ $< 
 
 ${NAME}:	${OBJS}
-	echo ${OBJS}
+
 	${CC} ${CFLAGS} -o ${NAME} ${OBJS}
 
 clean:		

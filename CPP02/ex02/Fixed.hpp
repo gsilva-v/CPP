@@ -8,7 +8,7 @@ private:
 	int	fixed_number;
 	static const int frac_bits_num = 8;
 public:
-	Fixed(/* args */);
+	Fixed();
 	Fixed(const Fixed &fixed);
 	Fixed(const int fixed);
 	Fixed(const float fixed);
@@ -33,18 +33,16 @@ public:
 	Fixed &operator/ (const Fixed &fixed);
 
 	// increment
-	Fixed operator++ (int value);//posincremento
-	Fixed &operator++ (void);//preincremento
-	Fixed operator-- (int value);//posdecremento
-	Fixed &operator-- (void);//predecremento
+	Fixed operator++ (int value);
+	Fixed &operator++ (void);
+	Fixed operator-- (int value);
+	Fixed &operator-- (void);
 
 	// Max and min
 	static Fixed &min(Fixed &f1, Fixed &f2);
 	static const Fixed &min(Fixed  const &f1, Fixed const &f2);
 	static Fixed &max(Fixed &f1, Fixed &f2);
 	static const Fixed &max(Fixed  const &f1, Fixed const &f2);
-
-
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &num);

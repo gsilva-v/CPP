@@ -1,7 +1,7 @@
 NAME = zombies
-CC = g++
+CC = c++
 
-CFLAGS = -std=c++98 -g -Wall -Werror -Wextra -Wall -Wextra -Werror
+CFLAGS = -std=c++98 -g -Wall -Werror -Wextra
 
 SRC = ./main.cpp ./newZombie.cpp randomChump.cpp Zombie.cpp
 
@@ -13,7 +13,7 @@ all:	${NAME}
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 ${NAME}:	${OBJS}
-	echo ${OBJS}
+
 	${CC} ${CFLAGS} -o ${NAME} ${OBJS}
 
 clean:		

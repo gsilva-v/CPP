@@ -7,12 +7,12 @@ private:
 	int	fixed_number;
 	static const int frac_bits_num = 8;
 public:
-	Fixed(/* args */);
+	Fixed();
 	Fixed(const Fixed &fixed);
-	void	operator = (const Fixed &fixed);
+	void	operator= (const Fixed &fixed);
 	~Fixed();
-	int		getRawBits( void ) const;
-	void	setRawBits( int const raw );
+	int		getRawBits(void) const;
+	void	setRawBits(int const raw);
 };
 
 #endif

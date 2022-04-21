@@ -6,7 +6,7 @@
 class Harl
 {
 private:
-	std::map<std::string,  void(Harl::*)(void)> commandList;
+	std::string commandList[4];
 	void debug( void );
 	void info( void );
 	void warning( void );

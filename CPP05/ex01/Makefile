@@ -1,5 +1,5 @@
 NAME = Form
-CC = g++
+CC = c++
 
 CFLAGS = -std=c++98 -g #-Wall -Werror -Wextra
 
@@ -14,7 +14,7 @@ all:	${NAME}
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 ${NAME}:	${OBJS}
-	echo ${OBJS}
+
 	${CC} ${CFLAGS} -o ${NAME} ${OBJS}
 
 clean:		
